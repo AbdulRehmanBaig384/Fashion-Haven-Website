@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1ded; /* Dark purple background */
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    z-index: 1050;
+    background-color: #292a45; /* Darker background for navbar */
+    border-bottom: 2px solid #46477a;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ffd700; /* Light pink for navbar branding */
+}
+
+/* Hero Section */
+.productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.board {
+    flex: 0 1 calc(33.333% - 1rem); /* Three cards per row */
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #24243e; /* Card background */
+    border: 2px solid #9a8c98; /* Softer border color */
+}
+
+.board:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(202, 153, 255, 0.3); /* Subtle purple glow */
+}
+
+.productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #9a8c98; /* Border for images */
+}
+
+.productName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f4ede4; 
+}
+
+.productPrice {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #6c757d; 
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.3rem 0.6rem;
+}
+
+.productDescription {
+    font-size: 0.9rem;
+    color: #d3d3d3; 
+}
+
+.addToCartBtn {
+    font-weight: bold;
+    background-color: #6a0572; 
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s;
+}
+.addToCartBtn:hover {
+    background-color: #a550df; 
+}
+
+
+.offcanvas {
+    padding: 1rem;
+    background-color: #24243e; 
+}
+.cart-container .productImage {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border: 2px solid #9a8c98; 
+}
+
+.cart-container .productName {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #f4ede4; 
+}
+
+.cart-container .productPrice {
+    font-size: 1rem;
+    color: #c9ada7; 
+}
+
+.removeItemBtn {
+    border-radius: 50%;
+    padding: 0.4rem;
+    background-color: #ff6b6b; 
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s;
+}
+.removeItemBtn:hover {
+    background-color: #ff4c4c; 
+}
+
+
+footer h5 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  footer p, footer li {
+    font-size: 0.9rem;
+  }
+  
+  footer a:hover {
+    color: #ffcc00; 
+  }

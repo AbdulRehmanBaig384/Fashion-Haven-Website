@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fashion Haven</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body style="background-color: darkorchid">
+    <nav
+      class="navbar bg-body-dark fixed-top bg-dark border-1 border-bottom border-secondary"
+    >
+      <div class="container">
+        <a class="navbar-brand h1 fs-1 text-light">Fashion Haven</a>
+        <!-- cart -->
+        <button
+          class="btn btn-lg btn-light"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <i class="fa-solid fa-cart-plus fa-flip-horizontal"></i>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end bg-dark"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
+          <div class="offcanvas-header border-bottom border-1 border-secondary">
+            <h5
+              class="offcanvas-title text-light h1"
+              id="offcanvasWithBothOptionsLabel"
+            >
+              Cart Items
+            </h5>
+            <button
+              type="button"
+              class="btn-close bg-light"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body px-0">
+            <div class="container">
+              <div class="row cart-container"></div>
+            </div>
+          </div>
+        </div>
+        <!-- end of cart -->
+      </div>
+    </nav>
+    <!-- hero section -->
+    <section class="container mt-5 py-5">
+      <div
+        class="row g-3 my-3 productContainer justify-content-center justify-content-md-start"
+      ></div>
+    </section>
+   
+    <footer class="py-5 bg-dark text-light">
+        <div class="container">
+          <div class="row">
+            <!-- About Us Section -->
+            <div class="col-md-4">
+              <h5 class="fw-bold">About Us</h5>
+              <p class="small">
+                Welcome to Style Spectrum, your one-stop destination for trendy and high-quality clothing. We strive to bring you the latest styles with unmatched quality and comfort.
+              </p>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="col-md-2">
+              <h5 class="fw-bold">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                <li><a href="#" class="text-light text-decoration-none">Shop</a></li>
+                <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Contact Info Section -->
+            <div class="col-md-3">
+              <h5 class="fw-bold">Contact Us</h5>
+              <p class="small">
+                Address: 123 Fashion Street, Trendy City, TX 75001<br>
+                Phone: +1 234 567 890<br>
+                Email: <a href="mailto:support@stylespectrum.com" class="text-light text-decoration-none">support@stylespectrum.com</a>
+              </p>
+            </div>
+            <!-- Social Media Links -->
+            <div class="col-md-3">
+              <h5 class="fw-bold">Follow Us</h5>
+              <div class="d-flex gap-3">
+                <a href="#" class="text-light"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-pinterest fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4 border-light">
+          <!-- Footer Bottom -->
+          <div class="row text-center">
+            <div class="col">
+              <p class="small m-0">© 2025 Style Spectrum. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
