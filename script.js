@@ -1,25 +1,29 @@
 const productContainer = document.querySelector(".productContainer");
 const cartContainer = document.querySelector(".cart-container");
+
 let cart = [];
 
-// Function to render product cards
+
 async function renderCards() {
+
     let products = await getProducts();
     productContainer.innerHTML = "";
 
     products.forEach(product => {
+        
         let card = document.createElement("div");
+        
         card.setAttribute("class", "col-11 col-sm-6 col-lg-4 col-xxl-3 board");
         card.innerHTML = `
             <div class="bg-dark rounded-3 shadow-lg border border-secondary border-3">
                 <div class="p-3 d-flex flex-column align-items-stretch gap-2">
-                    <img
-                      src="${product.image}"
-                      alt="${product.category}"
-                      class="img-fluid rounded productImage"
-                    />
+                    <img src="${product.image}" alt="${product.category}"
+                     class="img-fluid rounded productImage" />
+                     
                     <div class="d-flex justify-content-between align-items-center">
+                    
                         <p class="productName text-light">${product.category}</p>
+
                         <p class="productPrice text-light bg-secondary rounded-5 px-3">
                         $${product.price}
                         </p>
