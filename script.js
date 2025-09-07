@@ -16,8 +16,11 @@ async function renderCards() {
         card.setAttribute("class", "col-11 col-sm-6 col-lg-4 col-xxl-3 board");
         card.innerHTML = `
             <div class="bg-dark rounded-3 shadow-lg border border-secondary border-3">
+            
                 <div class="p-3 d-flex flex-column align-items-stretch gap-2">
+                
                     <img src="${product.image}" alt="${product.category}"
+                    
                      class="img-fluid rounded productImage" />
                      
                     <div class="d-flex justify-content-between align-items-center">
@@ -25,30 +28,41 @@ async function renderCards() {
                         <p class="productName text-light">${product.category}</p>
 
                         <p class="productPrice text-light bg-secondary rounded-5 px-3">
+                        
                         $${product.price}
+                        
                         </p>
                     </div>
                     <p class="text-light productDescription">
+                    
                        ${product.description}
+                       
                     </p>
                     <button 
                       class="btn rounded-5 btn-outline-light addToCartBtn" 
+                      
                       id="btn-${product.id}" 
-                      onclick="addToCart(${product.id})"
-                    >
+                      
+                      onclick="addToCart(${product.id})" >
                       ${cart.some(item => item.id === product.id) ? "Added to Cart" : "Add to Cart"}
+                      
                     </button>
+                    
                 </div>
+                
             </div>
         `;
 
         productContainer.appendChild(card);
-    });
+    }
+    );
 }
 
 // Function to add a product to the cart
 async function addToCart(productId) {
+    
     let products = await getProducts();
+    
     let selectedProduct = products.find(product => product.id === productId);
 
     if (selectedProduct && !cart.some(item => item.id === productId)) {
@@ -57,13 +71,16 @@ async function addToCart(productId) {
 
         // Update the button text
         let button = document.getElementById(`btn-${productId}`);
+        
         if (button) {
+            
             button.innerText = "Added to Cart";
+            
             button.classList.remove("btn-outline-light");
+            
             button.classList.add("btn-light");
         }
 
-        // Re-render the cart items
         renderCartItems();
     }
 }
